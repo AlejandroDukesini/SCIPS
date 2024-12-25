@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /*Fundamental Styles*/
-        html, body{margin:0;padding:0;}.spa-aro{display:flex;justify-content:space-around}.spa-cen{display:flex;justify-content:center}
+        html, body{margin:0;padding:0;}.spa-aro{display:flex;justify-content:space-around}.spa-cen{display:flex;justify-content:center}.spa-bet{display:flex;justify-content:space-between}.spa-eve{display:flex;justify-content:space-evenly}
         /*-------------*/
         /*Specific Styles*/
+
         /*-------------*/
         /*Header*/
+        nav{background-color:rgba(58, 68, 57, 0.753);padding:1px;}
+        nav ol li{list-style:none;}nav ol li a{text-decoration:none;color:#CDCABB;transition-duration:500ms;}nav ol li a:hover{text-decoration:none;color:#D61106;transition-duration:500ms;}
         /*-------------*/
         /*Section*/
+        section article ol li{list-style:none;}
         /*-------------*/
         /*Footer*/
         /*-------------*/
@@ -22,22 +26,56 @@
     <header>
         <nav>
             <ol class="spa-aro">
-                <li><a href="index-catalogue.html">Banco</a></li>
-                <li><img src="#" alt="Logo "></li>
-                <li><a href="#">Configuración</a></li>
+                <li><img src="/galeria/imagenes-index/#" alt="Logo "></li>
+                <li><a href="vlog-casino.html">Banco</a></li>
+                <li><a href="/html-juegos/menu-juegos.html">Apuesta</a></li>
+                <li><a href="configuraciones-del-casino.html">Configuración</a></li>
             </ol>
         </nav>
     </header>
     <section>
         <article>
             <div class="spa-cen"><h2>Juegos Destacados</h2></div>
-            <ol>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+            <ol class="spa-eve">
+                <li>
+                    <a href="/html-juegos/poker-js.html">
+                        <div>
+                            <div>
+                                <img src="#" alt="Imagen del juego">
+                            </div>
+                            <div>
+                                <h3>Póker</h3>
+                                <p>Proyecto JS</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html-juegos/blackjack-vue.html">
+                        <div>
+                            <div>
+                                <img src="#" alt="Imagen del juego">
+                            </div>
+                            <div>
+                                <h3>BlackJack</h3>
+                                <p>Proyecto Vue</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html-juegos/rulette-react.html">
+                        <div>
+                            <div>
+                                <img src="#" alt="Imagen del juego">
+                            </div>
+                            <div>
+                                <h3>Ruleta</h3>
+                                <p>Proyecto React</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
             </ol>
         </article>
     </section>
