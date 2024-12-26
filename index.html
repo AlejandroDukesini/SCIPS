@@ -3,48 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fonts Inter-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!--Fonts Poppers-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Fonts-->
     <style>
         /*Fundamental Styles*/
-        html, body{margin:0;padding:0;}.spa-aro{display:flex;justify-content:space-around}.spa-cen{display:flex;justify-content:center}.spa-bet{display:flex;justify-content:space-between}.spa-eve{display:flex;justify-content:space-evenly}
-        /*-------------*/
-        /*Specific Styles*/
-
-        /*-------------*/
+        body{margin:0;padding:0;min-height: 100vh;display: flex;flex-direction: column;}html{margin:0;padding:0;}.spa-aro{display:flex;justify-content:space-around}.spa-cen{display:flex;justify-content:center}.spa-bet{display:flex;justify-content:space-between}.spa-eve{display:flex;justify-content:space-evenly}
+        /*Fonts*/
+        .inter-nav{font-family: "Inter", serif;font-optical-sizing: auto;font-weight:300;font-style: normal;}
+        .pop-sec-art{font-family: "Poppins", serif;font-weight: 400;font-style: normal;}
         /*Header*/
-        nav{background-color:rgba(58, 68, 57, 0.753);padding:1px;}
-        nav ol li{list-style:none;}nav ol li a{text-decoration:none;color:#CDCABB;transition-duration:500ms;}nav ol li a:hover{text-decoration:none;color:#D61106;transition-duration:500ms;}
-        /*-------------*/
+        nav ol li img{max-width:128px;}nav{background-color:#354d6a;padding:1px;}nav ol li{list-style:none;display:flex;align-items:center;}nav ol li a{text-decoration:none;color:#CDCABB;transition-duration:500ms;}nav ol li a:hover{text-decoration:none;color:#9c45d6;transition-duration:500ms;}
         /*Section*/
-        section article ol li{list-style:none;}
-        /*-------------*/
+        .mintitle{margin-top:3rem;}section{background-color:#eddde0;padding:1px;}section article ol li{list-style:none;}
         /*Footer*/
-        /*-------------*/
+        .tdc li a{color:#CDCABB;transition-duration: 500ms;}.tdc li a:hover{color:#eddde0;width:20px;transition-duration: 500ms;}.footertitle{color:#CDCABB;}footer{background-color:rgba(0, 0, 0, 0.575);padding:1px;}footer ol li{list-style:none;}footer ol li a{color:white;text-decoration:none;}
     </style>
     <title>Menueishon</title>
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="inter-nav">
             <ol class="spa-aro">
-                <li><img src="/galeria/imagenes-index/#" alt="Logo "></li>
+                <li><img src="/galeria/imagenes-index/LOGOTIPO.png" alt="Logotipo"></li>
                 <li><a href="vlog-casino.html">Banco</a></li>
                 <li><a href="/html-juegos/menu-juegos.html">Apuesta</a></li>
                 <li><a href="configuraciones-del-casino.html">Configuración</a></li>
             </ol>
         </nav>
     </header>
-    <section>
+    <section class="pop-sec-art">
         <article>
-            <div class="spa-cen"><h2>Juegos Destacados</h2></div>
+            <div class="spa-cen mintitle"><h2>Juegos Destacados</h2></div>
             <ol class="spa-eve">
                 <li>
                     <a href="/html-juegos/poker-project-js/poker-js.html">
                         <div>
                             <div>
-                                <img src="#" alt="Imagen del juego">
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" width="256px" alt="Imagen del juego">
                             </div>
-                            <div>
+                            <div class="spa-cen">
                                 <h3>Póker</h3>
+                            </div>
+                            <div class="spa-cen">
                                 <p>Proyecto JS</p>
                             </div>
                         </div>
@@ -54,10 +57,12 @@
                     <a href="/html-juegos/blackjack-project-vue/blackjack-vue.html">
                         <div>
                             <div>
-                                <img src="#" alt="Imagen del juego">
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" width="256px" alt="Imagen del juego">
                             </div>
-                            <div>
+                            <div class="spa-cen">
                                 <h3>BlackJack</h3>
+                            </div>
+                            <div class="spa-cen">
                                 <p>Proyecto Vue</p>
                             </div>
                         </div>
@@ -67,10 +72,12 @@
                     <a href="/html-juegos/rulette-project-react/rulette-react.html">
                         <div>
                             <div>
-                                <img src="#" alt="Imagen del juego">
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" width="256px" ="Imagen del juego">
                             </div>
-                            <div>
+                            <div class="spa-cen">
                                 <h3>Ruleta</h3>
+                            </div>
+                            <div class="spa-cen">
                                 <p>Proyecto React</p>
                             </div>
                         </div>
@@ -78,9 +85,75 @@
                 </li>
             </ol>
         </article>
+        <article>
+            <div class="spa-cen mintitle"><h2>Otros Juegos</h2></div>
+            <ol class="spa-eve">
+                <li>
+                    <a href="/html-juegos/poker-project-js/poker-js.html">
+                        <div>
+                            <div>
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" width="256px" alt="Imagen del juego">
+                            </div>
+                            <div class="spa-cen">
+                                <h3>Baccarat</h3>
+                            </div>
+                            <div class="spa-cen">
+                                <p>Proyecto ?</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html-juegos/blackjack-project-vue/blackjack-vue.html">
+                        <div>
+                            <div>
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" width="256px" alt="Imagen del juego">
+                            </div>
+                            <div class="spa-cen">
+                                <h3>Whitejack</h3>
+                            </div>
+                            <div class="spa-cen">
+                                <p>Proyecto ?</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/html-juegos/rulette-project-react/rulette-react.html">
+                        <div>
+                            <div>
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" width="256px" alt="Imagen del juego">
+                            </div>
+                            <div class="spa-cen">
+                                <h3>Texas Hold'Em</h3>
+                            </div>
+                            <div class="spa-cen">
+                                <p>Proyecto ?</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+        </article>
     </section>
-    <footer>
-
+    <footer class="pop-sec-art">
+        <div>
+            <ol class="spa-aro tdc">
+                <li><a href="catalogo-juegos.html">Banco</a></li>
+                <li><img src="/galeria/imagenes-index/LOGOTIPO.png" width="128px" alt="Logotipo"></li>
+                <li><a href="/html-juegos/menu-juegos.html">Apuesta</a></li>
+            </ol>
+        </div>
+        <div>
+            <div class="spa-cen footertitle"><p>Juegos</p></div>
+            <ol class="spa-aro tdc">
+                <li><a href="/html-juegos/poker-project-js/poker-js.html">Póker</a></li>
+                <li><a href="/html-juegos/blackjack-project-vue/blackjack-vue.html">BlackJack</a></li>
+                <li><a href="/html-juegos/rulette-project-react/rulette-react.html">Ruleta</a></li>
+                <li><a href="#">Baccarat</a></li>
+                <li><a href="#">WhiteJack</a></li>
+                <li><a href="#">Texas Hold'Em</a></li>
+            </ol>
+        </div>
     </footer>
 </body>
 </html>

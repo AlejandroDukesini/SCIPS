@@ -1,0 +1,7 @@
+Colores representativos de la paleta inicial:
+#354d6a Steel Blue
+#eddde0 Pale Blush Pink
+
+Secundarios
+#CDCABB Blanco Rosa
+#9c45d6 Morado Suave
