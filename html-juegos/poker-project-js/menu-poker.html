@@ -15,9 +15,9 @@
         .inter-nav{font-family: "Inter", serif;font-optical-sizing: auto;font-weight:300;font-style: normal;}
         .pop-sec-art{font-family: "Poppins", serif;font-weight: 400;font-style: normal;}
         /*Header*/
-        nav ol li img{max-width:128px;}nav{background-color:#354d6a;padding:1px;}nav ol li{list-style:none;display:flex;align-items:center;}nav ol li a{text-decoration:none;color:#CDCABB;transition-duration:500ms;}nav ol li a:hover{text-decoration:none;color:#9c45d6;transition-duration:500ms;}
+        nav ol li img{max-width:128px;}nav{background-color:#354d6a;padding:1px;}nav ol li{list-style:none;display:flex;align-items:center;}nav ol li a{text-decoration:none;color:#CDCABB;transition-duration:250ms;}nav ol li a:hover{text-decoration:none;color:#9c45d6;transition-duration:500ms;}
         /*Section*/
-        section{background-color:#eddde0;padding:1px;}.dpj-ti{max-width:75%;display:flex;justify-content:center;}
+        section{background-color:#eddde0;padding:1px;}.dpj-ti{max-width:75%;display:flex;justify-content:center;}.projects li{list-style:none;}.projects li img{max-width:256px;}.prjs{padding:7px;margin:2px;border-radius:9px;border:1px solid black;max-width:250px;}.txt-desc-prjs{text-align:justify;}.prjs a{color:black;text-decoration:none;transition-duration:250ms;}.prjs a:hover{color:rgb(136, 94, 94);transition-duration:250ms;}
         /*Footer*/
         footer{background-color:rgba(0, 0, 0, 0.575);padding:1px;}
     </style>
@@ -29,7 +29,7 @@
             <ol class="spa-aro">
                 <li><img src="/galeria/imagenes-index/LOGOTIPO.png" alt="Logotipo"></li>
                 <li><a href="/vlog-casino.html">Banco</a></li>
-                <li><a href="/index.html">Devolverse</a></li>
+                <li><a href="/index.html">Ir al menú</a></li>
             </ol>
         </nav>
     </header>
@@ -54,40 +54,46 @@
             </div>
         </article>
         <article><!--Listado de los proyectos que se están haciendo en JS-->
-            <div> <!--Añadir imágenes, títulos y descripciónes-->
-                <ol class="spa-eve">
-                    <li>
-                        <div>
-                            <img src="#" alt="Imagen Proyecto JS 1">
-                        </div>
-                        <div>
-                            <p>Título</p>
-                        </div>
-                        <div>
-                            <p>Descripción</p>
-                        </div>
+            <div> 
+                <ol class="spa-eve projects">
+                    <li class="prjs">
+                        <a href="/html-juegos/poker-project-js/sistema-de-gestion-de-tareas.html">
+                            <div class="spa-cen">
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" alt="Imagen Proyecto JS 1">
+                            </div>
+                            <div class="spa-cen">
+                                <p>Proyecto Uno: Sistema De Gestión De Tareas</p>
+                            </div>
+                            <div class="spa-cen txt-desc-prjs">
+                                <p>Realizar con JavaScript un sistema de gestión de tareas el cual pueda realizar la opción CRUD.</p>
+                            </div>
+                        </a>
                     </li>
-                    <li>
-                        <div>
-                            <img src="#" alt="Imagen Proyecto JS 1">
-                        </div>
-                        <div>
-                            <p>Título</p>
-                        </div>
-                        <div>
-                            <p>Descripción</p>
-                        </div>
+                    <li class="prjs">
+                        <a href="/html-juegos/poker-project-js/">
+                            <div class="spa-cen">
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" alt="Imagen Proyecto JS 2">
+                            </div>
+                            <div class="spa-cen">
+                                <p>Proyecto Dos: Juego De Memoria</p>
+                            </div>
+                            <div class="spa-cen txt-desc-prjs">
+                                <p>Realizar en JavaScript un juego el cual involucre activamente la memoria del jugador.</p>
+                            </div>
+                        </a>
                     </li>
-                    <li>
-                        <div>
-                            <img src="#" alt="Imagen Proyecto JS 1">
-                        </div>
-                        <div>
-                            <p>Título</p>
-                        </div>
-                        <div>
-                            <p>Descripción</p>
-                        </div>
+                    <li class="prjs">
+                        <a href="/html-juegos/poker-project-js/">
+                            <div class="spa-cen">
+                                <img src="/galeria/imagenes-index/ISOLOGO.png" alt="Imagen Proyecto JS 3">
+                            </div>
+                            <div class="spa-cen">
+                                <p>Proyecto Tres: Dashboard De Criptomonedas</p>
+                            </div>
+                            <div class="spa-cen txt-desc-prjs">
+                                <p>Realizar en JavaScript un menú, tabla o dashboard sobre las Criptomonedas con gráficos en la vida real</p>
+                            </div>
+                        </a>
                     </li>
                 </ol>
                 <div class="spacey"></div>
