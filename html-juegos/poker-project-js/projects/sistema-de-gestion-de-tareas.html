@@ -20,6 +20,8 @@
         section{background-color:#eddde0;padding:1px;}
         /*Footer*/
         footer{background-color:rgba(0, 0, 0, 0.575);padding:1px;}
+        /*CLASES E IDS NECESARIOS PARA EL ARCHIVO JS*/
+        .no-show{display:none;}
     </style>
     <title>Document</title>
 </head>
@@ -28,6 +30,7 @@
         <nav class="inter-nav">
             <ol class="spa-aro">
                 <li><img src="/galeria/imagenes-index/LOGOTIPO.png" alt="Logotipo"></li>
+                <li><a href="/html-juegos/poker-project-js/projects/log-in-poker-site-web.html">Ingresar</a></li>
                 <li><a href="/index.html">Ir al Menú Principal</a></li>
             </ol>
         </nav>
@@ -35,19 +38,71 @@
     <section class="pop-sec-art">
         <article>
             <div>
-                <!--INPUTS PARA CREAR NOTAS-->
-            </div>
-            <div>
-                <!--La nota hiría aquí-->
-                <div>
-                    <p><!--Título de la nota--></p>
-                </div>
-                <div>
-                    <p><!--Lo que contiene la nota--></p>
-                </div>
-                <div>
-                    <!--Opciones para editar la nota-->
-                </div>
+                <!--INPUTS PARA CREAR Tareas-->
+                <form action="" method="get">
+                    <button id="showFormButton">Crear Tarea</button>
+                    <div id="taskForm" class="no-show">
+                        <div> <!--Título de la tarea-->
+                            <div>
+                                <h2>Crear Nueva Tarea</h2>
+                            </div>
+                            <div>
+                                <label for="taskTitle">Título:</label>
+                                <input type="text" id="taskTitle" required>
+                            </div>
+                        </div>
+                        <div> <!--Descripción de la tarea-->
+                            <label for="taskDescription">Descripción:</label>
+                            <textarea id="taskDescription" required></textarea>
+                        </div>
+                        <div> <!--Escoger la categoría de la tarea-->
+                            <label for="taskCategory">Categoría:</label>
+                            <select id="taskCategory" required>
+                                <option value="">Seleccione una categoría</option>
+                                <option value="personal">Personal</option>
+                                <option value="trabajo">Trabajo</option>
+                                <option value="estudio">Estudio</option>
+                            </select>
+                        </div>
+                        <div>
+                            
+                        <button id="submitTaskButton">Guardar Tarea</button>
+                        </div>
+                    </div>
+                    <script>
+                        //Ingresa al sitio web para guardar los datos
+                        //Obtiene el ID del botón, elimina la clase no-show del formulario.
+                        //Se archiva en un buscador en la parte inferior.
+                        // Simulación de función que verifica si el usuario está autenticado
+                        function isUser LoggedIn() {
+                            // Aquí deberías implementar la lógica real para verificar el estado de autenticación
+                            // Por ejemplo, podrías verificar un token en el almacenamiento local o una variable de sesión
+                            return localStorage.getItem('userLoggedIn') === 'true'; // Simulación
+                        }
+                        document.getElementById('showFormButton').addEventListener('click', function() {
+                            // Obtener el elemento del formulario
+                            const taskForm = document.getElementById('taskForm');
+                            
+                            // Eliminar la clase 'no-show' para mostrar el formulario
+                            taskForm.classList.remove('no-show');
+                        });
+
+                        // Opcional: Agregar funcionalidad para guardar la tarea
+                        document.getElementById('submitTaskButton').addEventListener('click', function() {
+                            const title = document.getElementById('taskTitle').value;
+                            const description = document.getElementById('taskDescription').value;
+                            const category = document.getElementById('taskCategory').value;
+
+                            // Aquí puedes agregar la lógica para guardar la tarea
+                            console.log('Tarea guardada:', { title, description, category });
+
+                            // Limpiar el formulario después de guardar
+                            document.getElementById('taskTitle').value = '';
+                            document.getElementById('taskDescription').value = '';
+                            document.getElementById('taskCategory').value = '';
+                        });
+                    </script>
+                </form>
             </div>
         </article>
     </section>
