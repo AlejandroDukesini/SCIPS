@@ -9,104 +9,337 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!--Fonts-->
     <style>
-        /*Fundamental Styles Default*/
-        body{margin:0;padding:0;min-height:100vh;display:flex;flex-direction:column;}html{margin:0;padding:0;}.spa-aro{display:flex;justify-content:space-around}.spa-cen{display:flex;justify-content:center}.spa-bet{display:flex;justify-content:space-between}.spa-eve{display:flex;justify-content:space-evenly}.spacey{margin-top:2.5rem;margin-bottom:2.5rem;}.spacex{margin-left:2.5rem;margin-right:2.5rem;}.txt-just{text-align:justify;}
-        /*Fonts Default*/
-        .inter-nav{font-family: "Inter", serif;font-optical-sizing: auto;font-weight:300;font-style: normal;}
-        .pop-sec-art{font-family: "Poppins", serif;font-weight: 400;font-style: normal;}
-        /*Header*/
-        nav ol li img{max-width:128px;}nav{background-color:#354d6a;padding:1px;}nav ol li{list-style:none;display:flex;align-items:center;}nav ol li a{text-decoration:none;color:#CDCABB;transition-duration:250ms;}nav ol li a:hover{text-decoration:none;color:#9c45d6;transition-duration:500ms;}
-        /*Section*/
-        section{background-color:#eddde0;padding:1px;}
-        /*Footer*/
-        footer{background-color:rgba(0, 0, 0, 0.575);padding:1px;}
         /*CLASES E IDS NECESARIOS PARA EL ARCHIVO JS*/
         .no-show{display:none;}
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        padding: 20px;
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .task-form {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .search-container {
+        margin-bottom: 20px;
+    }
+
+    .tasks-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .task-card {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        cursor: move;
+    }
+
+    .task-card:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .task-card h3 {
+        margin-bottom: 10px;
+    }
+
+    .task-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        margin: 10px 0;
+    }
+
+    .tag {
+        background: #e9ecef;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.85em;
+    }
+
+    .task-actions {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn-edit {
+        background-color: #ffc107;
+        color: black;
+    }
+
+    .btn-delete {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .dragging {
+        opacity: 0.5;
+    }
     </style>
-    <title>Document</title>
+    <title>Poker</title><link rel="stylesheet" href="/css-stilos/predeterminado.css">
+</head>
 </head>
 <body>
     <header>
         <nav class="inter-nav">
             <ol class="spa-aro">
                 <li><img src="/galeria/imagenes-index/LOGOTIPO.png" alt="Logotipo"></li>
-                <li><a href="/html-juegos/poker-project-js/projects/log-in-poker-site-web.html">Ingresar</a></li>
-                <li><a href="/index.html">Ir al Menú Principal</a></li>
+                <li><a href="/index.html">Ir al menú</a></li>
             </ol>
         </nav>
     </header>
-    <section class="pop-sec-art">
-        <article>
-            <div>
-                <!--INPUTS PARA CREAR Tareas-->
-                <form action="" method="get">
-                    <button id="showFormButton">Crear Tarea</button>
-                    <div id="taskForm" class="no-show">
-                        <div> <!--Título de la tarea-->
-                            <div>
-                                <h2>Crear Nueva Tarea</h2>
-                            </div>
-                            <div>
-                                <label for="taskTitle">Título:</label>
-                                <input type="text" id="taskTitle" required>
-                            </div>
-                        </div>
-                        <div> <!--Descripción de la tarea-->
-                            <label for="taskDescription">Descripción:</label>
-                            <textarea id="taskDescription" required></textarea>
-                        </div>
-                        <div> <!--Escoger la categoría de la tarea-->
-                            <label for="taskCategory">Categoría:</label>
-                            <select id="taskCategory" required>
-                                <option value="">Seleccione una categoría</option>
-                                <option value="personal">Personal</option>
-                                <option value="trabajo">Trabajo</option>
-                                <option value="estudio">Estudio</option>
-                            </select>
-                        </div>
-                        <div>
-                            
-                        <button id="submitTaskButton">Guardar Tarea</button>
-                        </div>
+    <section>
+        <div class="container">
+            <div class="header"><h1>Sistema de Gestión de Tareas</h1></div>
+            <div class="task-form" id="taskForm">
+                <h2>Crear Nueva Tarea</h2>
+                <form id="form">
+                    <input type="hidden" id="taskId">
+                    <div class="form-group">
+                        <label for="title">Título</label>
+                        <input type="text" id="title" required>
                     </div>
-                    <script>
-                        //Ingresa al sitio web para guardar los datos
-                        //Obtiene el ID del botón, elimina la clase no-show del formulario.
-                        //Se archiva en un buscador en la parte inferior.
-                        // Simulación de función que verifica si el usuario está autenticado
-                        function isUser LoggedIn() {
-                            // Aquí deberías implementar la lógica real para verificar el estado de autenticación
-                            // Por ejemplo, podrías verificar un token en el almacenamiento local o una variable de sesión
-                            return localStorage.getItem('userLoggedIn') === 'true'; // Simulación
-                        }
-                        document.getElementById('showFormButton').addEventListener('click', function() {
-                            // Obtener el elemento del formulario
-                            const taskForm = document.getElementById('taskForm');
-                            
-                            // Eliminar la clase 'no-show' para mostrar el formulario
-                            taskForm.classList.remove('no-show');
-                        });
-
-                        // Opcional: Agregar funcionalidad para guardar la tarea
-                        document.getElementById('submitTaskButton').addEventListener('click', function() {
-                            const title = document.getElementById('taskTitle').value;
-                            const description = document.getElementById('taskDescription').value;
-                            const category = document.getElementById('taskCategory').value;
-
-                            // Aquí puedes agregar la lógica para guardar la tarea
-                            console.log('Tarea guardada:', { title, description, category });
-
-                            // Limpiar el formulario después de guardar
-                            document.getElementById('taskTitle').value = '';
-                            document.getElementById('taskDescription').value = '';
-                            document.getElementById('taskCategory').value = '';
-                        });
-                    </script>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <textarea id="description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tags">Etiquetas (separadas por comas)</label>
+                        <input type="text" id="tags" placeholder="trabajo, urgente, proyecto">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar Tarea</button>
                 </form>
             </div>
-        </article>
+    
+            <div class="search-container">
+                <div class="form-group">
+                    <input type="text" id="searchInput" placeholder="Buscar tareas...">
+                </div>
+            </div>
+            <div class="tasks-container" id="tasksContainer"></div>
+        </div>
     </section>
     <footer class="pop-sec-art">
+        <ol class="unique spa-eve">
+            <li class="version"><p>Version de la plantilla 1.1</p></li>
+            <li class="copyright"><p>Copyright Libre</p></li>
+        </ol>
     </footer>
+<script>
+    class TaskManager {
+        constructor() {
+            this.tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            this.form = document.getElementById('form');
+            this.tasksContainer = document.getElementById('tasksContainer');
+            this.searchInput = document.getElementById('searchInput');
+            this.setupEventListeners();
+            this.renderTasks();
+        }
+
+        setupEventListeners() {
+            this.form.addEventListener('submit', (e) => this.handleSubmit(e));
+            this.searchInput.addEventListener('input', () => this.handleSearch());
+            this.setupDragAndDrop();
+        }
+
+        setupDragAndDrop() {
+            this.tasksContainer.addEventListener('dragstart', (e) => {
+                if (e.target.classList.contains('task-card')) {
+                    e.target.classList.add('dragging');
+                    e.dataTransfer.setData('text/plain', e.target.dataset.id);
+                }
+            });
+
+            this.tasksContainer.addEventListener('dragend', (e) => {
+                if (e.target.classList.contains('task-card')) {
+                    e.target.classList.remove('dragging');
+                }
+            });
+
+            this.tasksContainer.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                const afterElement = this.getDragAfterElement(e.clientY);
+                const draggable = document.querySelector('.dragging');
+                if (afterElement) {
+                    this.tasksContainer.insertBefore(draggable, afterElement);
+                } else {
+                    this.tasksContainer.appendChild(draggable);
+                }
+            });
+        }
+
+        getDragAfterElement(y) {
+            const draggableElements = [...this.tasksContainer.querySelectorAll('.task-card:not(.dragging)')];
+            return draggableElements.reduce((closest, child) => {
+                const box = child.getBoundingClientRect();
+                const offset = y - box.top - box.height / 2;
+                if (offset < 0 && offset > closest.offset) {
+                    return { offset: offset, element: child };
+                } else {
+                    return closest;
+                }
+            }, { offset: Number.NEGATIVE_INFINITY }).element;
+        }
+
+        handleSubmit(e) {
+            e.preventDefault();
+            const taskId = document.getElementById('taskId').value;
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const tags = document.getElementById('tags').value
+                .split(',')
+                .map(tag => tag.trim())
+                .filter(tag => tag);
+
+            if (taskId) {
+                this.updateTask(taskId, { title, description, tags });
+            } else {
+                this.createTask({ title, description, tags });
+            }
+
+            this.form.reset();
+            document.getElementById('taskId').value = '';
+        }
+
+        createTask(taskData) {
+            const task = {
+                id: Date.now().toString(),
+                ...taskData,
+                createdAt: new Date().toISOString()
+            };
+            this.tasks.push(task);
+            this.saveTasks();
+            this.renderTasks();
+        }
+
+        updateTask(taskId, taskData) {
+            this.tasks = this.tasks.map(task => 
+                task.id === taskId 
+                    ? { ...task, ...taskData, updatedAt: new Date().toISOString() }
+                    : task
+            );
+            this.saveTasks();
+            this.renderTasks();
+        }
+
+        deleteTask(taskId) {
+            this.tasks = this.tasks.filter(task => task.id !== taskId);
+            this.saveTasks();
+            this.renderTasks();
+        }
+
+        editTask(taskId) {
+            const task = this.tasks.find(t => t.id === taskId);
+            if (task) {
+                document.getElementById('taskId').value = task.id;
+                document.getElementById('title').value = task.title;
+                document.getElementById('description').value = task.description;
+                document.getElementById('tags').value = task.tags.join(', ');
+            }
+        }
+
+        handleSearch() {
+            const searchTerm = this.searchInput.value.toLowerCase();
+            const filteredTasks = this.tasks.filter(task => 
+                task.title.toLowerCase().includes(searchTerm) ||
+                task.description.toLowerCase().includes(searchTerm) ||
+                task.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+            );
+            this.renderTasks(filteredTasks);
+        }
+
+        saveTasks() {
+            localStorage.setItem('tasks', JSON.stringify(this.tasks));
+        }
+
+        renderTasks(tasksToRender = this.tasks) {
+            this.tasksContainer.innerHTML = tasksToRender
+                .map(task => `
+                    <div class="task-card" draggable="true" data-id="${task.id}">
+                        <h3>${task.title}</h3>
+                        <p>${task.description}</p>
+                        <div class="task-tags">
+                            ${task.tags.map(tag => `
+                                <span class="tag">${tag}</span>
+                            `).join('')}
+                        </div>
+                        <div class="task-actions">
+                            <button class="btn btn-edit" onclick="taskManager.editTask('${task.id}')">
+                                Editar
+                            </button>
+                            <button class="btn btn-delete" onclick="taskManager.deleteTask('${task.id}')">
+                                Eliminar
+                            </button>
+                        </div>
+                    </div>
+                `).join('');
+        }
+    }
+
+    const taskManager = new TaskManager();
+</script>
+    <script src="/html-juegos/poker-project-js/projects/poker.js"></script>
 </body>
 </html>

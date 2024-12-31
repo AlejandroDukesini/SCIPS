@@ -19,8 +19,12 @@ footer{padding:1px;}
 nav ol li img{max-width:128px;}
 nav{background-color:#354d6a;padding:1px;}
 nav ol li{list-style:none;display:flex;align-items:center;}
-nav ol li a{text-decoration:none;color:#CDCABB;font-size:16px;transition-duration:100ms;}
-nav ol li a:hover{text-decoration:none;color:#9c45d6;font-size:20px;transition-duration:250ms;}
+nav ol li a{text-decoration:none;color:#CDCABB;font-size:16px;transition-duration:75ms;}
+nav ol li a:hover{text-decoration:none;color:#9c45d6;font-size:20px;transition-duration:100ms;}
+
+/*Section*/
+section{background-color:#eddde0;}
 
 /*Footer*/
+footer{background-color:rgba(0, 0, 0, 0.575);}
 .unique li{list-style:none;}
