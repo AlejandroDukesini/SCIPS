@@ -144,15 +144,15 @@
 <body>
     <header>
         <nav class="inter-nav">
-            <ol class="spa-aro">
+            <ol class="spa-aro space-top space-bottom">
                 <li><img src="/galeria/imagenes-index/LOGOTIPO.png" alt="Logotipo"></li>
-                <li><a href="/index.html">Ir al menú</a></li>
+                <li><div class="enlace-flotante"><a href="/index.html">Ir al menú</a></div></li>
             </ol>
         </nav>
     </header>
     <section>
         <div class="container">
-            <div class="header"><h1>Sistema de Gestión de Tareas</h1></div>
+            <div class="header space-topxd"><h1>Sistema de Gestión de Tareas</h1></div>
             <div class="task-form" id="taskForm">
                 <h2>Crear Nueva Tarea</h2>
                 <form id="form">
@@ -178,15 +178,9 @@
                     <input type="text" id="searchInput" placeholder="Buscar tareas...">
                 </div>
             </div>
-            <div class="tasks-container" id="tasksContainer"></div>
+            <div class="tasks-container space-bottomxd" id="tasksContainer"></div>
         </div>
     </section>
-    <footer class="pop-sec-art">
-        <ol class="unique spa-eve">
-            <li class="version"><p>Version de la plantilla 1.1</p></li>
-            <li class="copyright"><p>Copyright Libre</p></li>
-        </ol>
-    </footer>
 <script>
     class TaskManager {
         constructor() {
@@ -341,5 +335,11 @@
     const taskManager = new TaskManager();
 </script>
     <script src="/html-juegos/poker-project-js/projects/poker.js"></script>
+    <footer class="pop-sec-art space-top space-bottom">
+        <ol class="unique spa-eve">
+            <li class="version"><p>Version de la plantilla 1.2</p></li>
+            <li class="copyright"><p>Copyright Libre</p></li>
+        </ol>
+    </footer>
 </body>
 </html>

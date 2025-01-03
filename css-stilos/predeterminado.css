@@ -8,6 +8,8 @@ footer{padding:1px;}
 .spa-cen{display:flex;justify-content:center}
 .spa-bet{display:flex;justify-content:space-between}
 .spa-eve{display:flex;justify-content:space-evenly}
+.space-bottom{padding-bottom:2rem;}
+.space-bottomxd{padding-bottom:4rem;}
 .space-top{padding-top:2rem;}
 .space-topxd{padding-top:4rem;}
 
@@ -21,6 +23,7 @@ nav{background-color:#354d6a;padding:1px;}
 nav ol li{list-style:none;display:flex;align-items:center;}
 nav ol li a{text-decoration:none;color:#CDCABB;font-size:16px;transition-duration:75ms;}
 nav ol li a:hover{text-decoration:none;color:#9c45d6;font-size:20px;transition-duration:100ms;}
+.enlace-flotante{position:absolute;}
 
 /*Section*/
 section{background-color:#eddde0;}
