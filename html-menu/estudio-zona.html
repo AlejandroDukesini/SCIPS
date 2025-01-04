@@ -11,6 +11,12 @@
     <style>
         /*Section*/
         section{background-color:#eddde0;}
+        section li img{max-width:175px;}
+        .bloque-juegos{color:black;text-decoration:none;background-color:#8d573573;padding:10px;margin:10px;border:1px solid black;border-radius:20px;transition-duration:250ms;}
+        .bloque-juegos:hover{background-color:#22d69a90;padding:25px;margin:25px;border:1px solid black;border-radius:51px;transition-duration:250ms;}
+        .bloque-juegos img{border-radius:20px;}
+        .caja-texto{max-width:270px;}
+        .listado-enlaces a{text-decoration:none;}
         /*Footer*/
         footer{background-color:rgba(0, 0, 0, 0.575);}
     </style>
@@ -25,16 +31,121 @@
             </ol>
         </nav>
     </header>
+    <!--
+    NOTA:
+    MEJORAR IMAGENES, DESCRIPCIÓN, MEJORAR EL SEGUNDO TEXTO QUE ESTA EN LA PARTE INFERIOR Y AÑADIR LINK:FAVICON
+    -->
     <section class="pop-sec-art">
         <article>
             <div class="spa-cen space-top"><h1>Aquí verás lo que fue aprendiendo poco a poco el programador de este Sitio Web</h1></div>
-            <div>
-                <ol class="spa-eve space-topxd space-bottomxd">
-                    <li><div><a href="#"><p>JavaScript</p></a></div></li>
-                    <li><div><a href="#"><p>HTML</p></a></div></li>
-                    <li><div><a href="#"><p>CSS</p></a></div></li>
-                    <li><div><a href="#"><p>React</p></a></div></li>
-                    <li><div><a href="#"><p>Angular</p></a></div></li>
+            <div class="listado-enlaces">
+                <!--LISTADO ARRIBA-->
+                <ol class="spa-eve space-topxd space-bottomxd unique">
+                    <li>
+                        <a href="#">
+                            <div  class="bloque-juegos">
+                                <div>
+                                    <div class="spa-cen">
+                                        <img src="/galeria/imagenes-index/DESCONOCIDO-FONDO.png" alt="Logo de HTML">
+                                    </div>
+                                    <div class="spa-cen">
+                                        <div><p>HTML</p></div>
+                                    </div>
+                                    <div class="spa-cen caja-texto">
+                                        <div class="jus-txt"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div  class="bloque-juegos">
+                                <div>
+                                    <div class="spa-cen">
+                                        <img src="/galeria/imagenes-index/DESCONOCIDO-FONDO.png" alt="Logo de CSS">
+                                    </div>
+                                    <div class="spa-cen">
+                                        <p>CSS</p>
+                                    </div>
+                                    <div class="spa-cen caja-texto">
+                                        <div class="jus-txt"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div  class="bloque-juegos">
+                                <div>
+                                    <div class="spa-cen">
+                                        <img src="/galeria/imagenes-index/DESCONOCIDO-FONDO.png" alt="Logo de JS">
+                                    </div>
+                                    <div class="spa-cen">
+                                        <p>JS</p>
+                                    </div>
+                                    <div class="spa-cen caja-texto">
+                                        <div class="jus-txt"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
+                <!--LISTADO ABAJO-->
+                <ol class="spa-eve space-topxd space-bottomxd unique">
+                    <li>
+                        <a href="#">
+                            <div  class="bloque-juegos">
+                                <div>
+                                    <div class="spa-cen">
+                                        <img src="/galeria/imagenes-index/DESCONOCIDO-FONDO.png" alt="Logo de REACT">
+                                    </div>
+                                    <div class="spa-cen">
+                                        <p>React</p>
+                                    </div>
+                                    <div class="spa-cen caja-texto">
+                                        <div class="jus-txt"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div  class="bloque-juegos">
+                                <div>
+                                    <div class="spa-cen">
+                                        <img src="/galeria/imagenes-index/DESCONOCIDO-FONDO.png" alt="Logo de ANGULAR">
+                                    </div>
+                                    <div class="spa-cen">
+                                        <p>ANGULAR</p>
+                                    </div>
+                                    <div class="spa-cen caja-texto">
+                                        <div class="jus-txt"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div  class="bloque-juegos">
+                                <div>
+                                    <div class="spa-cen">
+                                        <img src="/galeria/imagenes-index/DESCONOCIDO-FONDO.png" alt="Logo de VUE">
+                                    </div>
+                                    <div class="spa-cen">
+                                        <p>VUE</p>
+                                    </div>
+                                    <div class="spa-cen caja-texto">
+                                        <div class="jus-txt"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                 </ol>
             </div>
             <div>
@@ -51,7 +162,7 @@
     </section>
     <footer class="pop-sec-art">
         <ol class="unique">
-            <li class="version"><p>Version de la plantilla 1.2</p></li>
+            <li class="version"><p>Version de la plantilla 1.3</p></li>
             <li class="copyright"><p>Copyright Libre</p></li>
         </ol>
     </footer>

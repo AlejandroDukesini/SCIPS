@@ -15,6 +15,7 @@ footer{padding:1px;}
 .marginzero{margin:0;}
 .paddingzero{padding:0;}
 .withoutzero{margin:0;padding:0;}
+.jus-txt{text-align:justify;}
 
 /*Fonts*/
 .inter-nav{font-family:"Inter",serif;font-optical-sizing: auto;font-weight:600;font-style: normal;}
@@ -25,7 +26,7 @@ nav ol li img{max-width:128px;}
 nav{background-color:#354d6a;padding-top:16px;padding-bottom:20px;}
 nav ol li{list-style:none;display:flex;align-items:center;}
 nav ol li a{text-decoration:none;color:#CDCABB;font-size:16px;transition-duration:75ms;}
-nav ol li a:hover{text-decoration:none;color:#9c45d6;font-size:20px;transition-duration:100ms;}
+nav ol li a:hover{color:#9c45d6;font-size:20px;transition-duration:100ms;}
 .enlace-flotante{position:absolute;}
 
 /*Section*/
@@ -33,4 +34,4 @@ section{background-color:#eddde0;}
 
 /*Footer*/
 footer{background-color:rgba(0, 0, 0, 0.575);}
-.unique li{list-style:none;}
+.unique{list-style:none;}

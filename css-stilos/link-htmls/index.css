@@ -2,19 +2,19 @@
 .mintitle{margin-top:3rem;}
 .bkg-white{background-color:#eddde0;}
 section article ol li{list-style:none;}
-ol li a{color:white;text-decoration:none;transition-duration:250ms;}
-ol li a:hover{color:rgb(0, 0, 0);text-decoration:none;transition-duration:250ms;}
+ol a{color:white;text-decoration:none;transition-duration:250ms;}
+ol a:hover{color:rgb(0, 0, 0);}
 .bloque-juegos{background-color:#9c45d673;padding:10px;margin:10px;border:1px solid black;border-radius:20px;transition-duration:250ms;}
-.bloque-juegos:hover{background-color:#9c45d673;padding:30px;margin:30px;border:1px solid black;border-radius:60px;transition-duration:250ms;}
+.bloque-juegos:hover{padding:25px;margin:25px;border-radius:51px;transition-duration:250ms;}
 .bloque-juegos img{border-radius:20px;}
 
 /*Footer*/
-.tdc li a{color:#000000;font-size:16px;transition-duration:400ms;padding:100%;}
-.tdc li a:hover{color:#CDCABB;width:20px;font-size:20px;transition-duration: 400ms;}
+.tdc a{color:#000000;font-size:16px;transition-duration:400ms;padding:100%;}
+.tdc a:hover{color:#CDCABB;width:20px;font-size:20px;transition-duration: 400ms;}
 .tdc li{max-width:20px;}
 .footertitle{color:#CDCABB;}
 footer{background-color:rgba(0, 0, 0, 0.692);padding:1px;}
 footer ol li{list-style:none;}
-footer ol li a{color:white;text-decoration:none;}
+footer ol a{color:white;text-decoration:none;}
 .titlefooter{font-size:20px;}
 .unique p{color:white;}
